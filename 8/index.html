@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.1.1.min.css">
+
+</head>
+<body>
+<script>
+  $(document).ready(function() {
+    var username = 'aplusk';
+    var count = 10;
+    $.getJSON('http://twitter.com/statuses/user_timeline/' + username + '.json?callback=?',
+    function(data) {
+      console.log(data);
+    });
+  });
+</script>
+
+<h1 id='feed-name'></h1>
+<div id='feed'>
+</div>
+
+
+
+</body>
+</html>
